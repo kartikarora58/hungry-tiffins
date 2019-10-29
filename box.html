@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	<link rel="stylesheet" type="text/css" href="box.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="navbar.js"></script>
+</head>
+<body>
+	<header>
+	<div style="background-color: #000000;">
+		<a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-official" style="font-size:25px; color: white;margin-left: 400px; margin-top: 5px"></i></a>
+		<a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter" style="font-size:25px; color: white;margin-left:10px;"></i></a>
+		<a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size:25px; color: white;margin-left:10px;"></i></a>
+		<a href="form.php"><button style="margin-left: 500px; margin-bottom:5px">Login</button></a>
+		<a href="signup.php"><button>Sign Up</button></a>
+	</div>	
+	<nav style="height: 70px; background-color: black" id="navbar">
+		<img src="logo.png" width="280px" height="70px" style="float: left;">
+		<ul style="display: inline;list-style-type: none;margin-top:-300 px;
+		">
+			<li><a href="box.html" style="color:white;">Home</a></li>
+			<li><a href="box.html#tar" style="color: white">Meal Plans</a></li>
+			<li><a href="box.html#tar2" style="color: white">Why Hungry Tiffins</a></li>
+			<li><a href="box.html#tar3" style="color: white">Support</a></li>
+			<li><button class="bt"><a href="form.php" style="text-decoration: none;">Order Now</a></button></li>
+		</ul>
+	</nav>
+	<script>
+	window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+	</header>
+<style>
+
+</style>
+</head>
+<body>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="1.png" style="width:1520px;margin-left: -260px;">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="2.png" style="width:1520px;margin-left: -260px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="3.png" style="width:1520px;margin-left: -260px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="4.png" style="width:1520px;margin-left: -260px;">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
+}
+</script>
+
+<div id="tar" style="background-color: #eeeeee;background-image: url('back.jpeg');height: 500px;">
+<h1 style="text-align: center;font-size: 50px;color: #a00030;">Our Meal Plans</h1>
+<h3 style="text-align: center;font-size: 20px;color: #505050;margin-top: -10px;">See what is included in the meals</h3>
+<button class="button" onclick="document.getElementById('myImage').src='veg.png'" style="margin-left:570px;">Veg</button>
+
+<button class="button" onclick="document.getElementById('myImage').src='nonveg.png'" style="margin-left: 40px;">Non-Veg</button><br>
+<br>
+<br> 
+<img id="myImage"  src="veg.png" style="width:500px;height: 300px;margin-left: 470px;">
+</div>
+<div class="parallax" style="background-image: url('box.jpeg');"> </div>
+<div style="background-color: #000000;">
+<div class="container" id="tar2">
+	<h1 style="text-align: center;color: #a00030">Why Hungry Tiffins</h1>
+	<div class="row">
+		<div class="col-md-6" style="margin-left: -50px;" >
+			<img src="q.png">
+			<h2 style="text-align:center;margin-top: -80px; color: #a00030">Ghar ka Khana</h2>
+			<p style="text-align: center;margin-left: 100px;font-size: 18px;color: white;">Delicious Home Style food with minimal oil / masalas.</p>
+			<img src="w.png">
+			<h2 style="text-align:center;margin-top: -80px; color: #a00030">Amazing variety</h2>
+			<p style="text-align: center;margin-left: 120px;font-size: 18px;color: white;">You will love the variety coz at SpiceBox - No dish is repeated All Month!!</p>
+		    <img src="e.png">
+			<h2 style="text-align:center;margin-top: -80px; color: #a00030">Easy Ordering</h2>
+			<p style="text-align: center;margin-left: 120px;font-size: 18px;color: white;">Ordering your meal on the Hungry Tiffins Website will take less than 2 mins!!</p>
+		</div>
+		<div class="col-md-6">
+		<img src="f.png" style="margin-left: 20px;">
+		<h2 style="text-align:center;margin-right:110px;margin-top: -90px; color: #a00030">Short Trial</h2>
+<p style="text-align: center;margin-right: -340px;font-size: 18px;color: white;">You can try the delicious Hungry Tiffins! meals for 1 week to <br> know what every one is raving about!</p>
+		<img src="g.png" style="margin-left: 20px;">
+		<h2 style="text-align:right;margin-right:-10px;margin-top: -90px; color: #a00030">Simple Cancellation System</h2>
+<p style="text-align: center;margin-right: -300px;font-size: 18px;color: white;">Cancelling your meal will take seconds & a credit for cancelled<br> meal will be provided to your wallet.</p>
+		<img src="h.png" style="margin-left: 20px;">
+		<h2 style="text-align:center;margin-right:100px;margin-top: -90px; color: #a00030">My Account</h2>
+<p style="text-align: center;margin-right: -310px;font-size: 18px;color: white;">Manage your orders - Cancellations, Order Renewals, Shares etc <br>within seconds.</p>
+		</div>
+		
+	</div>
+</div>
+<div class="parallax" style="background-image: url('food.jpg')";>
+</div>
+<footer>
+<div style="background-color: black;height:300px;padding:20px;" id="tar3">
+	<h1 align="center" style="color: #a00030;">Support</h1>
+	<h3 align="center" style="color: white;">For More info and support, Contact Us</h3>
+	<br>
+	<br>
+	<i class='fas fa-mail-bulk' style='font-size:24px;color: white;margin-left: 420px;'>&nbsp;&nbsp;&nbsp;&nbsp;info@hungrytiffins.in</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	<i class='fas fa-phone' style='font-size:24px;color: white;'>&nbsp; 9780312098:Business</i>
+	<br>
+	<br>
+</div>
+</footer>
+</body>
+</html>
